@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Krishisk</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a more professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Apply smooth scrolling for a better user experience */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fdf4;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .section-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 4rem 1rem;
+            text-align: left;
+        }
+        .nav-link:hover {
+            transform: scale(1.05);
+            color: #d1fae5;
+        }
+        /* Custom hero background with text shadow for readability */
+        #home {
+            background-image: url('https://www.theindiaforum.in/sites/default/files/field/image/2022/06/21/ramkumar-radhakrishnan-wikimedia-1622193304-1622193304.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #home h1, #home p {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .section-with-bg {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            color: white;
+            position: relative;
+        }
+        .section-with-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+            z-index: 1;
+        }
+        .section-with-bg > * {
+            position: relative;
+            z-index: 2;
+        }
+        #about {
+            background-image: url('https://images.yourstory.com/cs/5/f02aced0d86311e98e0865c1f0fe59a2/indian-farmer-1610471656527.png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75');
+        }
+        #community {
+            background-image: url('https://images.cnbctv18.com/uploads/2023/02/Farming-agriculture.jpg');
+        }
+        #education {
+            background-image: url('https://globebag.com/cdn/shop/articles/GlobeBagCompanyInc-312005-Hand-Waters-Plant-BlogBanner1.jpg?v=1731344684&width=1100');
+        }
+        #policy {
+            background-image: url('https://i.pinimg.com/736x/d6/ed/4d/d6ed4d80b0ea2c7ab9c7ba78d7b7b818.jpg');
+        }
+        #contact {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/038/450/942/small_2x/ai-generated-indian-female-farmer-working-in-her-field-bokeh-style-background-with-generative-ai-free-photo.jpeg');
+        }
+        #login {
+            background-image: url('https://images.unsplash.com/photo-1579895085449-74d32092c4a9?q=80&w=2940&auto=format&fit=crop');
+        }
+        /* Custom styling for horizontal scrolling cards */
+        .scrolling-wrapper {
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none; /* WebKit */
+        }
+
+        /* News Card Backgrounds with Overlay */
+        .news-card-bg {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: flex-end; /* Align content to the bottom of the card */
+            min-height: 250px; /* Set a fixed height for the cards to make the images visible */
+        }
+
+        .news-card-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)); /* Gradient overlay */
+            z-index: 1;
+            border-radius: 0.5rem;
+        }
+
+        .news-card-content {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem;
+        }
+
+        .news-card-1 { background-image: url('https://images.unsplash.com/photo-1579895085449-74d32092c4a9?q=80&w=2940&auto=format&fit=crop'); }
+        .news-card-2 { background-image: url('https://images.unsplash.com/photo-1518977676601-b58a74586f76?q=80&w=2940&auto=format&fit=crop'); }
+        .news-card-3 { background-image: url('https://images.unsplash.com/photo-1549487538-4e89798031e3?q=80&w=2940&auto=format&fit=crop'); }
+
+        .community-card-1 { background-image: url('https://images.unsplash.com/photo-1552581699-29175a28795c?q=80&w=2940&auto=format&fit=crop'); }
+        .community-card-2 { background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252069c?q=80&w=2940&auto=format&fit=crop'); }
+        .community-card-3 { background-image: url('https://images.unsplash.com/photo-1621932338165-24b914a51e62?q=80&w=2940&auto=format&fit=crop'); }
+        .community-card-4 { background-image: url('https://images.unsplash.com/photo-1549487538-4e89798031e3?q=80&w=2940&auto=format&fit=crop'); }
+
+        .education-card-1 { background-image: url('https://images.unsplash.com/photo-1579895085449-74d32092c4a9?q=80&w=2940&auto=format&fit=crop'); }
+        .education-card-2 { background-image: url('https://images.unsplash.com/photo-1588691880436-1550c8227092?q=80&w=2940&auto=format&fit=crop'); }
+        .education-card-3 { background-image: url('https://images.unsplash.com/photo-1547496417-31362085775f?q=80&w=2940&auto=format&fit=crop'); }
+
+        .policy-card-1 { background-image: url('https://images.unsplash.com/photo-1621640103770-466d71b4a49c?q=80&w=2940&auto=format&fit=crop'); }
+        .policy-card-2 { background-image: url('https://images.unsplash.com/photo-1590283088711-b0e6e768393c?q=80&w=2940&auto=format&fit=crop'); }
+        .policy-card-3 { background-image: url('https://images.unsplash.com/photo-1579895085449-74d32092c4a9?q=80&w=2940&auto=format&fit=crop'); }
+    </style>
+</head>
+<body class="bg-emerald-50 text-gray-800">
+
+    <!-- Top Bar & Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <div class="bg-emerald-800 text-white text-xs md:text-sm text-center py-2">
+            <p>Call Us: +91-1234567890 | Email: support@ekrishisk.in</p>
+        </div>
+        <nav class="bg-emerald-700 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg">
+            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white font-bold text-xl mb-4 md:mb-0">E-Krishisk</div>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                    <li><a href="#home" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Home</a></li>
+                    <li><a href="#news" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">News</a></li>
+                    <li><a href="#about" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">About Us</a></li>
+                    <li><a href="#community" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Community</a></li>
+                    <li><a href="#education" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Education</a></li>
+                    <li><a href="#policy" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Govt Policy</a></li>
+                    <li><a href="#contact" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Contact Us</a></li>
+                    <li><a href="#login" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section (Hero) -->
+    <section id="home" class="relative">
+        <div class="max-w-4xl mx-auto flex flex-col items-start text-left p-6 md:p-12 bg-black bg-opacity-30 rounded-lg">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">Agriculture Matters <br> Good production</h1>
+            <p class="text-lg md:text-xl text-white mb-8 max-w-2xl">
+                E-Krishisk is a digital platform designed to empower farmers and promote sustainable agriculture.
+            </p>
+            <a href="#about" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300">
+                Discover More
+            </a>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section-container bg-white py-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Latest News & Updates</h2>
+        <p class="text-base md:text-lg text-gray-600 mb-8 max-w-3xl">
+            Stay informed with the latest agricultural news, market trends, and platform updates.
+        </p>
+        <!-- Horizontal Scrolling Cards for News -->
+        <div class="mt-8 flex overflow-x-auto scrolling-wrapper gap-6 pb-4">
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg news-card-1">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">New Farming Subsidies Announced</h3>
+                    <p class="text-sm">The government has introduced new subsidies to support small-scale farmers and promote sustainable practices.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg news-card-2">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Organic Produce Market Trends</h3>
+                    <p class="text-sm">A new report shows a growing demand for organic produce in urban areas, creating new opportunities for farmers.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg news-card-3">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Technological Innovations in Agriculture</h3>
+                    <p class="text-sm">Learn about the latest tech tools and software helping farmers increase yield and efficiency.</p>
+                </div>
+            </a>
+        </div>
+        <div class="self-end mt-4">
+            <a href="#" class="bg-emerald-500 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-600">View More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-container section-with-bg py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">About Us</h2>
+        <p class="text-base md:text-lg mb-8 max-w-3xl">
+            E-Krishisk bridges traditional farming with modern tech. Our mission is sustainability, transparency, and community empowerment.
+        </p>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section-container section-with-bg py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Community</h2>
+        <p class="text-base md:text-lg mb-8 max-w-3xl">
+            Forums, mentoring, and events to connect and grow together.
+        </p>
+        <!-- Horizontal Scrolling Cards for Community -->
+        <div class="mt-8 flex overflow-x-auto scrolling-wrapper gap-6 pb-4">
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg community-card-1">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Community Forum</h3>
+                    <p class="text-sm">Join discussions, ask questions, and share your experiences with other farmers.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg community-card-2">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Peer-to-Peer Mentoring</h3>
+                    <p class="text-sm">Connect with experienced farmers and receive personalized guidance.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg community-card-3">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Event Calendar</h3>
+                    <p class="text-sm">Stay informed about upcoming webinars, workshops, and local meetups.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg community-card-4">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Knowledge Base</h3>
+                    <p class="text-sm">Access a curated library of articles and best practices for modern agriculture.</p>
+                </div>
+            </a>
+        </div>
+        <div class="self-end mt-4">
+            <a href="#" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">View More</a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-container section-with-bg py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Education</h2>
+        <p class="text-base md:text-lg mb-8 max-w-3xl">
+            Guides, tools, and databases to help farmers make smart decisions.
+        </p>
+        <!-- Horizontal Scrolling Cards for Education -->
+        <div class="mt-8 flex overflow-x-auto scrolling-wrapper gap-6 pb-4">
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg education-card-1">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Farming Guides</h3>
+                    <p class="text-sm">Step-by-step instructions on topics like composting, pest control, and irrigation techniques.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg education-card-2">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Crop Disease Database</h3>
+                    <p class="text-sm">Identify and remedy plant issues with visual aids and expert recommendations.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg education-card-3">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Soil & Crop Compatibility</h3>
+                    <p class="text-sm">Discover the best crops for your soil type and climate with our interactive tool.</p>
+                </div>
+            </a>
+        </div>
+        <div class="self-end mt-4">
+            <a href="#" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">View More</a>
+        </div>
+    </section>
+
+    <!-- Government Policy Section -->
+    <section id="policy" class="section-container section-with-bg py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Government Policy</h2>
+        <p class="text-base md:text-lg mb-8 max-w-3xl">
+            Understand how government policies affect your farm and future.
+        </p>
+        <!-- Horizontal Scrolling Cards for Government Policy -->
+        <div class="mt-8 flex overflow-x-auto scrolling-wrapper gap-6 pb-4">
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg policy-card-1">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">New Policies</h3>
+                    <p class="text-sm">Stay up-to-date with the latest government policies and schemes for agriculture.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg policy-card-2">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Subsidies & Grants</h3>
+                    <p class="text-sm">Find and apply for available financial assistance and grants to support your farm.</p>
+                </div>
+            </a>
+            <a href="#" class="block rounded-lg shadow-lg flex-none w-full md:w-1/2 lg:w-1/3 transition-transform transform hover:scale-105 news-card-bg policy-card-3">
+                <div class="p-6 news-card-content">
+                    <h3 class="text-xl font-semibold mb-2">Market Updates</h3>
+                    <p class="text-sm">Access real-time information on commodity prices and market trends.</p>
+                </div>
+            </a>
+        </div>
+        <div class="self-end mt-4">
+            <a href="#" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">View More</a>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section-container section-with-bg py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
+        <p class="text-base md:text-lg mb-8 max-w-3xl">
+            We’d love to hear from you. Reach out for support or collaboration.
+        </p>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section-container section-with-bg py-16">
+        <div class="w-full max-w-md p-8 mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Login</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="your.email@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="••••••••">
+                </div>
+                <div class="flex items-center justify-between mb-4">
+                    <a href="#" class="text-sm text-emerald-600 hover:underline">Forgot Password?</a>
+                    <a href="#" class="text-sm text-emerald-600 hover:underline">Create Account</a>
+                </div>
+                <button type="submit" class="w-full bg-emerald-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-600">
+                    Login
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white text-center py-4">
+        <p class="text-sm md:text-base">Healthy Life With Fresh Products</p>
+    </footer>
+
+</body>
+</html>
