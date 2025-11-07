@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidies & Grants for Indian Farmers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background for Subsidies Page: Farmer using modern machinery */
+        .policy-content {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                              url('https://images.unsplash.com/photo-1544837330-d326960d705c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-container { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+        .scheme-card { border-top: 4px solid #f59e0b; /* Amber */ }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow-md">
+        <div class="section-container py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-emerald-800">AgriConnect Hub</h1>
+            <nav>
+                <a href="./index.html" class="text-gray-600 hover:text-emerald-600 px-3">Home</a>
+                <a href="./new-policies.html" class="text-gray-600 hover:text-emerald-600 px-3">Policies</a>
+                <a href="./subsidies.html" class="text-emerald-600 font-semibold px-3">Subsidies</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="policy-content py-16">
+        <div class="section-container">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-emerald-800">
+                🚜 Find & Apply for Subsidies & Grants
+            </h2>
+            <p class="text-xl text-gray-600 mb-10">
+                Unlock financial support through key schemes for working capital, modernization, and social security.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="scheme-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-2">Kisan Credit Card (KCC) Scheme</h3>
+                    <p class="text-gray-700 mb-4">Provides short-term credit limits up to $\text{Rs. 3}$ lakh for crop production, post-harvest expenses, and working capital for allied activities at low interest (4% effective rate for prompt payers).</p>
+                    <a href="https://www.jansamarth.in/kisan-credit-card-yojana" class="inline-block bg-amber-500 text-white font-semibold py-2 px-4 rounded hover:bg-amber-600 transition-colors">Official Application Portal</a>
+                </div>
+
+                <div class="scheme-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-2">PM-KISAN: Direct Income Support</h3>
+                    <p class="text-gray-700 mb-4">The flagship scheme providing $\text{Rs. 6,000}$ per year directly to the bank accounts of eligible farmer families, ensuring financial security for input purchases.</p>
+                    <a href="https://pmkisan.gov.in/" class="inline-block bg-amber-500 text-white font-semibold py-2 px-4 rounded hover:bg-amber-600 transition-colors">Check Status / Registration</a>
+                </div>
+                
+                <div class="scheme-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-2">Farm Mechanization Subsidies</h3>
+                    <p class="text-gray-700 mb-4">Subsidies (typically 40%-50%) are provided for purchasing modern machinery like Tractors, Rotavators, Seed Drills, and Drones to reduce labor and increase efficiency.</p>
+                    <a href="https://agrimachinery.nic.in/" class="inline-block bg-amber-500 text-white font-semibold py-2 px-4 rounded hover:bg-amber-600 transition-colors">State-wise Subsidy Links</a>
+                </div>
+
+                <div class="scheme-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-2">PM-Kisan Maan Dhan Yojana (Pension)</h3>
+                    <p class="text-gray-700 mb-4">A social security scheme for small and marginal farmers providing a minimum fixed pension of $\text{Rs. 3,000}$ per month after attaining 60 years of age. Contributory scheme.</p>
+                    <a href="https://maandhan.in/" class="inline-block bg-amber-500 text-white font-semibold py-2 px-4 rounded hover:bg-amber-600 transition-colors">Pension Scheme Details</a>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="./index.html" class="bg-gray-700 text-white font-bold text-lg py-3 px-8 rounded-full shadow-xl transition-all duration-300 hover:bg-gray-800 hover:translate-y-[-2px]">
+                    &larr; Back to Main Menu
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="section-container text-center text-sm">
+            &copy; 2025 AgriConnect Hub. Always verify eligibility criteria on official scheme portals.
+        </div>
+    </footer>
+
+</body>
+</html>

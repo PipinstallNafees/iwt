@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Policy Hub: Government Schemes, Subsidies & Market Updates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* SOLUTION: Using a LOCAL image file named 'farm_background.jpg' */
+        #policy {
+            /* This links to the image file saved in the same folder! */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                              url('farm_background.jpg'); 
+            
+            background-color: #047857; /* Fallback color remains */
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: fixed;
+        }
+        .section-container { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+        .scrolling-wrapper { -webkit-overflow-scrolling: touch; }
+        .scrolling-wrapper > a { min-width: 300px; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow-md">
+        <div class="section-container py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-emerald-800">AgriConnect Hub</h1>
+            <nav>
+                <a href="./index.html" class="text-emerald-600 font-semibold px-3">Home</a>
+                <a href="./new-policies.html" class="text-gray-600 hover:text-emerald-600 px-3">Policies</a>
+                <a href="./subsidies.html" class="text-gray-600 hover:text-emerald-600 px-3">Subsidies</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="policy" class="section-container py-20 text-white min-h-[600px]">
+        <div class="relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 pb-2 inline-block">
+                🌾 Government Policy: Resources
+            </h2>
+            <p class="text-lg md:text-xl mb-12 max-w-4xl font-light opacity-90">
+                Find structured information on government initiatives, financial aid, and market access to empower your farm.
+            </p>
+            
+            <div class="mt-8 flex overflow-x-auto scrolling-wrapper gap-6 pb-6">
+                
+                <a href="./new-policies.html" class="group block rounded-xl shadow-2xl flex-none w-11/12 sm:w-80 lg:w-96 transition-transform transform hover:scale-[1.03] bg-emerald-700/80 hover:bg-emerald-600/90 duration-300 border-2 border-emerald-500/50">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center">
+                            <span class="mr-3 text-3xl">📰</span> Latest Schemes (Top 10)
+                        </h3>
+                        <p class="text-base font-light text-gray-100">
+                            Detailed information on the 10 most recent and impactful agricultural policies in India.
+                        </p>
+                        <span class="mt-4 inline-block font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                            View All Policies &rarr;
+                        </span>
+                    </div>
+                </a>
+                
+                <a href="./subsidies.html" class="group block rounded-xl shadow-2xl flex-none w-11/12 sm:w-80 lg:w-96 transition-transform transform hover:scale-[1.03] bg-emerald-700/80 hover:bg-emerald-600/90 duration-300 border-2 border-emerald-500/50">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center">
+                            <span class="mr-3 text-3xl">💰</span> Funding & Grants
+                        </h3>
+                        <p class="text-base font-light text-gray-100">
+                            Comprehensive guides on applying for **PM-KISAN**, **KCC** loans, and equipment subsidies.
+                        </p>
+                        <span class="mt-4 inline-block font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                            Explore Financial Aid &rarr;
+                        </span>
+                    </div>
+                </a>
+                
+                <a href="./market-updates.html" class="group block rounded-xl shadow-2xl flex-none w-11/12 sm:w-80 lg:w-96 transition-transform transform hover:scale-[1.03] bg-emerald-700/80 hover:bg-emerald-600/90 duration-300 border-2 border-emerald-500/50">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center">
+                            <span class="mr-3 text-3xl">📈</span> Market Price Access
+                        </h3>
+                        <p class="text-base font-light text-gray-100">
+                            Direct links to **e-NAM** and official data sources for checking live commodity prices and MSP.
+                        </p>
+                        <span class="mt-4 inline-block font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                            Check Market Data &rarr;
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-12 text-center sm:text-left">
+                <a href="./new-policies.html" class="bg-white text-emerald-800 font-bold text-lg py-3 px-8 rounded-full shadow-xl transition-all duration-300 hover:bg-emerald-100 hover:shadow-2xl hover:translate-y-[-2px] inline-flex items-center">
+                    Dive into Policy Details &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="section-container text-center text-sm">
+            &copy; 2025 AgriConnect Hub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

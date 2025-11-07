@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Market Prices & MSP Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background for Market Page: Agricultural market */
+        .policy-content {
+            /* Using a relevant image of a market/mandi */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                              url('https://images.unsplash.com/photo-1542826829-f1981b219e49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-container { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+        .resource-card { border-top: 4px solid #3b82f6; /* Blue */ }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow-md">
+        <div class="section-container py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-emerald-800">AgriConnect Hub</h1>
+            <nav>
+                <a href="./index.html" class="text-gray-600 hover:text-emerald-600 px-3">Home</a>
+                <a href="./new-policies.html" class="text-gray-600 hover:text-emerald-600 px-3">Policies</a>
+                <a href="./subsidies.html" class="text-gray-600 hover:text-emerald-600 px-3">Subsidies</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="policy-content py-16">
+        <div class="section-container">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-emerald-800">
+                📈 Real-Time Market Prices & Trading Resources
+            </h2>
+            <p class="text-xl text-gray-600 mb-10">
+                Access crucial market data to inform your harvest timing and sales decisions for better price realization.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="resource-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">National Agriculture Market (e-NAM)</h3>
+                    <p class="text-gray-700 mb-4">A pan-India electronic trading portal that networks the existing APMC mandis to create a unified national market for agricultural commodities.</p>
+                    <a href="https://enam.gov.in/web/" class="inline-block bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition-colors">Go to e-NAM Portal</a>
+                </div>
+
+                <div class="resource-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Minimum Support Price (MSP) Checker</h3>
+                    <p class="text-gray-700 mb-4">Check the latest Minimum Support Prices (MSP) announced by the government for Kharif, Rabi, and other commercial crops before the sowing season.</p>
+                    <a href="https://fasalrin.gov.in/" class="inline-block bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition-colors">Check Latest MSP Rates</a>
+                </div>
+                
+                <div class="resource-card p-6 shadow-xl rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">AGMARKNET Portal</h3>
+                    <p class="text-gray-700 mb-4">Provides market-related information like daily prices and arrivals data across various markets in India. Essential for local and regional price checks.</p>
+                    <a href="https://agmarknet.gov.in/" class="inline-block bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition-colors">Access AGMARKNET Data</a>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="./index.html" class="bg-gray-700 text-white font-bold text-lg py-3 px-8 rounded-full shadow-xl transition-all duration-300 hover:bg-gray-800 hover:translate-y-[-2px]">
+                    &larr; Back to Main Menu
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="section-container text-center text-sm">
+            &copy; 2025 AgriConnect Hub. Use this data for strategic planning.
+        </div>
+    </footer>
+
+</body>
+</html>
