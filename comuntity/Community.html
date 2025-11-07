@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hub | E-Krishisk</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Re-apply the same font theme */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fdf4; /* Light emerald background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .nav-link:hover {
+            transform: scale(1.05);
+            color: #d1fae5;
+        }
+        
+        /* Style for the feature cards */
+        .feature-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease-in-out;
+            border-left: 5px solid #10b981; /* Emerald-500 */
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-emerald-50 text-gray-800">
+
+    <header class="fixed top-0 left-0 w-full z-50">
+        <div class="bg-emerald-800 text-white text-xs md:text-sm text-center py-2">
+            <p>Call Us: +91-1234567890 | Email: support@ekrishisk.in</p>
+        </div>
+        <nav class="bg-emerald-700 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg">
+            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white font-bold text-xl mb-4 md:mb-0">E-Krishisk</div>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                    <li><a href="index.html#home" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Home</a></li>
+                    <li><a href="index.html#news" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">News</a></li>
+                    <li><a href="index.html#about" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">About Us</a></li>
+                    <li><a href="#" class="nav-link text-emerald-300 font-bold text-lg" aria-current="page">Community</a></li>
+                    <li><a href="index.html#education" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Education</a></li>
+                    <li><a href="index.html#policy" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Govt Policy</a></li>
+                    <li><a href="index.html#contact" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Contact Us</a></li>
+                    <li><a href="index.html#login" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[124px] md:pt-[112px]">
+        <div class="container mx-auto px-4 py-8">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-emerald-800">E-Krishisk Community Hub</h1>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Welcome! This is the heart of our platform. Connect, share, and learn with fellow farmers.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <a href="chat.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V10a2 2 0 012-2h8z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Global Chat</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Join the live, real-time chat with all farmers on the platform. Ask questions and get answers now.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">Go to Chat &rarr;</span>
+                </a>
+
+                <a href="forum.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Community Forum</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Post questions, reply to topics, and use tags to find discussions on specific subjects.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">Go to Forum &rarr;</span>
+                </a>
+
+                <a href="knowledge-base.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Knowledge Base</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">A curated library of articles, guides, and best practices for sustainable farming.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">Browse Articles &rarr;</span>
+                </a>
+
+                <a href="mentoring.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V19a2 2 0 00-2-2H7a2 2 0 00-2 2v2M12 7a4 4 0 100-8 4 4 0 000 8zm0 0c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Peer Mentoring</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Connect with experienced farmers (Mentors) to get one-on-one guidance and advice.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">Find a Mentor &rarr;</span>
+                </a>
+                
+                <a href="expertQA.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Expert Q&A</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Get answers to common farming questions from our team of agricultural experts.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">View the FAQ &rarr;</span>
+                </a>
+                
+                <a href="equipment.html" class="feature-card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.763a1 1 0 01.95 1.316l-3.238 8.634A1 1 0 0115.5 21H14v-4a2 2 0 00-2-2h-1m-1-4H6a2 2 0 00-2 2v4h6m0 0v4H6a2 2 0 01-2-2v-4m0 0H3m3 0h.01M9 16v-2m0 0H6m3 0h.01m6.03-7l-3.238-8.634A1 1 0 0010.824 3H5a1 1 0 00-1 1v6a1 1 0 001 1h4.18" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-gray-800 ml-4">Equipment Sharing</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">List your tools or machinery (like tractors) for rent or loan to others in your area.</p>
+                    <span class="font-semibold text-emerald-600 hover:text-emerald-700">Browse Listings &rarr;</span>
+                </a>
+                
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-emerald-800 text-white text-center py-6 mt-16">
+        <p class="text-sm md:text-base">© 2024 E-Krishisk. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
