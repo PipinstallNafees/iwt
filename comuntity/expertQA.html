@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Q&A | E-Krishisk</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Re-apply the same font theme */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fdf4; /* Light emerald background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .nav-link:hover {
+            transform: scale(1.05);
+            color: #d1fae5;
+        }
+
+        /* Styles for Accordion */
+        .accordion-content {
+            max-height: 0; /* Starts closed */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out; /* Animation */
+            background-color: #fafafa; 
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border: 1px solid #e5e7eb; /* light gray border */
+            border-top: none; 
+        }
+
+        .accordion-button {
+            transition: background-color 0.2s ease;
+        }
+
+        /* Style for when the button is "active" (open) */
+        .accordion-button.active {
+            background-color: #ecfdf5; /* A very light emerald */
+        }
+
+        .accordion-arrow {
+            transition: transform 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-emerald-50 text-gray-800">
+
+    <header class="fixed top-0 left-0 w-full z-50">
+        <div class="bg-emerald-800 text-white text-xs md:text-sm text-center py-2">
+            <p>Call Us: +91-1234567890 | Email: support@ekrishisk.in</p>
+        </div>
+        <nav class="bg-emerald-700 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg">
+            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white font-bold text-xl mb-4 md:mb-0">E-Krishisk</div>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                    <li><a href="index.html#home" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Home</a></li>
+                    <li><a href="index.html#news" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">News</a></li>
+                    <li><a href="index.html#about" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">About Us</a></li>
+                    <li><a href="community-hub.html" class="nav-link text-emerald-300 font-bold text-lg" aria-current="page">Community</a></li>
+                    <li><a href="index.html#education" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Education</a></li>
+                    <li><a href="index.html#policy" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Govt Policy</a></li>
+                    <li><a href="index.html#contact" class="nav-link text-white font-semibold text-lg hover:text-emerald-300 transition-colors">Contact Us</a></li>
+                    <li><a href="index.html#login" class="bg-white text-emerald-700 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-emerald-100">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[124px] md:pt-[112px]">
+        <div class="container mx-auto px-4 py-8">
+            
+            <div class="mb-6">
+                <a href="community-hub.html" class="text-emerald-600 font-semibold hover:text-emerald-800 transition-colors">
+                    &larr; Back to Community Hub
+                </a>
+            </div>
+
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-emerald-800">Expert Q&A</h1>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Frequently Asked Questions about farming, answered by our experts.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto shadow-lg rounded-lg">
+                <div class="space-y-2">
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 rounded-t-lg focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">How can I improve my soil health without chemical fertilizers?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Improving soil health organically is key. Focus on:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Composting:</strong> Use farm waste, manure, and kitchen scraps to add rich organic matter.</li>
+                                    <li><strong>Cover Crops:</strong> Plant legumes (clover, vetch) or grasses (rye) in the off-season.</li>
+                                    <li><strong>Crop Rotation:</strong> Avoid planting the same crop in the same spot every year.</li>
+                                    <li><strong>Mulching:</strong> Apply straw or wood chips to conserve moisture and add organic matter.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What are the most effective organic pest control methods?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Organic pest control focuses on prevention and natural predators.
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Introduce Beneficial Insects:</strong> Ladybugs, lacewings, and parasitic wasps prey on pests.</li>
+                                    <li><strong>Neem Oil:</strong> A natural pesticide that disrupts insect life cycles.</li>
+                                    <li><strong>Companion Planting:</strong> Plant marigolds, garlic, or basil to repel pests.</li>
+                                    <li><strong>Floating Row Covers:</strong> A physical barrier to prevent insects from landing on plants.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What is drip irrigation and why is it so efficient?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Drip irrigation is a method that saves water by allowing it to drip slowly and directly to the roots. It's efficient because it:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Reduces evaporation</strong> by applying water directly to the soil.</li>
+                                    <li><strong>Prevents weed growth</strong> by only watering the crops.</li>
+                                    <li><strong>Saves time</strong> as the system can be automated.</li>
+                                    <li><strong>Delivers nutrients</strong> directly to the roots (a process called "fertigation").</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">Why is crop rotation so important?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Crop rotation is planting different types of crops in the same area in sequential seasons. It's vital for:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Nutrient Management:</strong> Legumes (beans, peas) add nitrogen to the soil, which feeds "heavy feeders" like corn.</li>
+                                    <li><strong>Pest and Disease Control:</strong> By removing a pest's food source for a season, you break its life cycle.</li>
+                                    <li><strong>Improved Soil Structure:</strong> Different root systems (deep vs. shallow) break up the soil at different levels.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What is "companion planting"?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Companion planting is growing different plants near each other for a mutual benefit. For example:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Pest Repulsion:</strong> Planting marigolds near tomatoes can repel nematodes and tomato hornworms.</li>
+                                    <li><strong>Attracting Pollinators:</strong> Planting borage or lavender can attract bees, which helps pollinate nearby fruit and vegetable crops.</li>
+                                    <li><strong>The "Three Sisters":</strong> A classic example. Corn provides a trellis for beans, beans fix nitrogen for the corn, and squash provides ground cover to keep weeds down.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">How do I test my soil's pH level?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                You can test your soil pH in two main ways:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Digital/Probe Tester:</strong> These are available at garden centers. You simply insert the metal probe into moist soil and get an instant reading.</li>
+                                    <li><strong>DIY Kit (Litmus Paper):</strong> These kits require you to mix a soil sample with distilled water, then dip a test strip into the solution and compare the color to a chart.</li>
+                                    <li><strong>Lab Testing:</strong> For the most accurate results, you can send a soil sample to your local agricultural extension office or a private lab. They will give you a detailed report on pH and nutrient levels.</li>
+                                </ul>
+                                <p class="mt-2">Most vegetables prefer a slightly acidic to neutral pH (around 6.0 to 7.0).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What's the difference between "Organic" and "Non-GMO"?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                This is a common point of confusion! They are not the same thing.
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Non-GMO (Genetically Modified Organism):</strong> This means the plant's DNA was not altered in a lab. A product can be Non-GMO but still grown using chemical pesticides and herbicides.</li>
+                                    <li><strong>Certified Organic:</strong> This is a much stricter standard. To be certified organic, a product must *also* be Non-GMO, *and* it must be grown without the use of most synthetic chemical pesticides, herbicides, or fertilizers.</li>
+                                </ul>
+                                <p class="mt-2"><strong>In short: All organic food is Non-GMO, but not all Non-GMO food is organic.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What is the difference between compost and manure?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Both are excellent soil conditioners, but they are different:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Manure:</strong> This is animal waste (from cows, chickens, horses, etc.). "Fresh" manure is very high in nitrogen and can "burn" plants. It should be "aged" or composted for at least 6 months before use.</li>
+                                    <li><strong>Compost:</strong> This is the result of decomposing mixed organic matter, which can include manure, but also kitchen scraps (vegetable peels), yard waste (leaves, grass clippings), and paper. Well-made compost is a balanced soil amendment that is ready to use immediately.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">How often should I water my crops?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                There is no single answer, as it depends on your **soil type, weather, and crop type**. The best rule is:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Check the Soil:</strong> Don't water on a fixed schedule. Instead, stick your finger 2-3 inches into the soil near the plant. If it feels dry at that depth, it's time to water.</li>
+                                    <li><strong>Water Deeply, Less Often:</strong> It's better to give your plants a deep, thorough watering (so the moisture soaks down to the deep roots) every few days, rather than a light sprinkle every day.</li>
+                                    <li><strong>Water in the Morning:</strong> Watering in the early morning is most efficient, as less water is lost to evaporation and the leaves have time to dry before nightfall, which prevents fungal diseases.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What are the signs of nutrient deficiency in plants?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Plants will often tell you what they need. Look for these common signs: 
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Yellowing older leaves (bottom of plant):</strong> This is a classic sign of **Nitrogen (N)** deficiency.</li>
+                                    <li><strong>Yellowing *new* leaves (top of plant):</strong> This often points to an **Iron (Fe)** deficiency.</li>
+                                    <li><strong>Purple or reddish tint on leaves:</strong> This is a common sign of **Phosphorus (P)** deficiency, especially in young plants.</li>
+                                    <li><strong>Yellowing or brown edges on leaves:</strong> This often indicates a **Potassium (K)** deficiency.</li>
+                                When you see these signs, applying a balanced compost or an appropriate organic fertilizer can help correct the issue.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-b-lg">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 font-semibold text-left text-gray-800 bg-white border border-gray-200 rounded-b-lg focus:outline-none hover:bg-emerald-50">
+                            <span class="text-xl">What is Integrated Pest Management (IPM)?</span>
+                            <svg class="accordion-arrow w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 text-lg text-gray-700 leading-relaxed">
+                                Integrated Pest Management (IPM) is a smarter, more sustainable approach to controlling pests. Instead of just spraying pesticides, it involves multiple steps:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>1. Prevention:</strong> Choosing disease-resistant crop varieties and practicing good sanitation (like removing dead plants) to prevent pests from showing up.</li>
+                                    <li><strong>2. Monitoring:</strong> Regularly scouting your fields to identify pests and see if their numbers are high enough to cause real damage.</li>
+                                    <li><strong>3. Biological Controls:</strong> Using natural predators (like ladybugs) or companion planting *before* using chemicals.</li>
+                                    <li><strong>4. Chemical Controls (As a Last Resort):</strong> If all other methods fail, using the most targeted and least toxic pesticide possible to handle the problem.</li>
+                                </ul>
+                                <p class="mt-2">IPM saves money, reduces environmental pollution, and is more effective in the long run.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-emerald-800 text-white text-center py-6 mt-16">
+        <p class="text-sm md:text-base">© 2024 E-Krishisk. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const arrow = button.querySelector('.accordion-arrow');
+                    const content = button.nextElementSibling;
+                    
+                    button.classList.toggle('active');
+
+                    if (arrow) {
+                        // Check if the arrow is already rotated
+                        if (arrow.style.transform === 'rotate(180deg)') {
+                            arrow.style.transform = 'rotate(0deg)';
+                        } else {
+                            arrow.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } 
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
